@@ -42,7 +42,11 @@ public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHand
         request.getSession().setAttribute(PASSWORD, request.getParameter(PASSWORD));
         request.getSession().setAttribute(USERNAME, request.getParameter(USERNAME));
 
-        User user = userRepository.getUserByUsername(request.getParameter(USERNAME));
+        User user;
+        user= userRepository.getUserByUsername(request.getParameter(USERNAME));
+        if (user==null){
+            user=userRepository.getUserByEmail(request.getParameter(USERNAME));
+        }
         user.setActiveOnline(true);
         userRepository.save(user);
 

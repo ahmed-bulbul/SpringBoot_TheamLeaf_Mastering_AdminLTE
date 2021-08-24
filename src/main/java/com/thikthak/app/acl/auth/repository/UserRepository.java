@@ -12,6 +12,7 @@ public interface UserRepository extends JpaRepository<User, Long> , JpaSpecifica
     //public interface UserRepository extends CrudRepository<User, Long> {
 
     User getUserByUsername(String username);
+    User getUserByEmail(String email);
     List<User> findByActiveOnlineAndUserType( Boolean activeOnline, String userType );
 
 }

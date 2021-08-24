@@ -35,10 +35,11 @@
 
                 <div class="col-md-7 logo-item">
                     <!-- logo here -->
-                    <img src="/static/img/walton_logo.png" th:src="@{/img/walton_logo.png}" alt="WaltonImage" style="height: 150px; width: 200px;">
+                    <img src="/static/img/walton_logo.png" th:src="@{/img/logo.jpg}" alt="WaltonImage" style="height: 150px; width: 200px;">
 <!--                    <h1 class="font-bold mt-4">thikthak.xyz -  Online Service Platform</h1>-->
-                    <h1 class="font-bold mt-4">thikthak.xyz</h1>
-                    <h1 class="font-bold">Online Service Platform</h1>
+                    <h1 class="font-bold mt-4">ERP(ODC)</h1>
+
+                    <h1 class="font-bold">ERP Project</h1>
                     <h3 class="font-bold">( Admin Panel )</h3>
                 </div>
 
@@ -77,6 +78,9 @@
 
                             <button type="submit" class="btn btn-primary btn-block">Login <i class="fas fa-arrow-circle-right"></i></button>
                         </form>
+                        <p class="mb-0">
+                            <a th:href="@{/register}" class="text-center">Register a new membership</a>
+                        </p>
                     </div>
                 </div>
 
@@ -103,7 +107,7 @@
         /*background-image: url("webapp");*/
         /*background-image: url{[[@{/img/Background.jpg}]]}*/
         /*background-image: url([[@{/img/bg/bg-2.jpg}]]);*/
-        background-image: url([[@{/images/bg/bg-2.jpg}]]);
+<!--        background-image: url([[@{/images/bg/bg-2.jpg}]]);-->
         background-repeat: no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;

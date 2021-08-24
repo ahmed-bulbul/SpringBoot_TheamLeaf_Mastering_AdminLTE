@@ -54,7 +54,7 @@ public class MyFilterInvocationSecurityMetadataSource implements FilterInvocatio
         String url = fi.getRequestUrl();
 
         // TODO ignore url, please put it here for filtering and release
-        if ( "/login".equals(url) || "/login?error".equals(url)  || url.contains("logout") ) {
+        if ( "/login".equals(url) || "/register".equals(url) || "/login?error".equals(url)  || url.contains("logout") ) {
             return null;
         }
 

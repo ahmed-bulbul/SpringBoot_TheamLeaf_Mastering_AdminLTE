@@ -54,6 +54,7 @@ public class User implements Serializable {
     String profession;
 
     @Email(message="{errors.invalid_email}")
+    @Column(name="email",nullable = false, unique = true)
     String email;                // [user]@[mysite].com = 64 + 255, but it should be 254
     String city;                 // [Dhaka, Chattogram, Sylhet...]
     String fullAddress;
