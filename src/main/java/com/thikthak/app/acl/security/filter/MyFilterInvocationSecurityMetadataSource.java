@@ -33,8 +33,13 @@ public class MyFilterInvocationSecurityMetadataSource implements FilterInvocatio
             } else {
                 attributes.add("ROLE_USER");
             }
-        } else {
+        }
+
+        else {
             attributes.add("ROLE_USER");
+            // url ফাকা হলে আমি যে যে রোল এর ইউজার কে ডুকতে দিব সেই ইউজার গুলাকে এট্রিবিঊট এ অ্যাড করব ------
+            attributes.add("ROLE_SUPER_ADMIN");
+            attributes.add("ROLE_ADMIN");
         }
 
 

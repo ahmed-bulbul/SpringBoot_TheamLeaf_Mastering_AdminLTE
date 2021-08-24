@@ -51,7 +51,7 @@
 <!--                <th:block th:utext="${T(com.thikthak.app.util.TestUtils).toUpperCase2('hello world 123')}"></th:block>-->
 
                 <div class="row">
-                    <div th:remove="tag" th:utext="${HTML_visitorsLog}"></div>
+                    <div sec:authorize="hasAnyAuthority('ROLE_ADMIN', 'EDITOR')"  th:remove="tag" th:utext="${HTML_visitorsLog}" ></div>
 <!--                    <div th:remove="tag" th:utext="${HTML_nOfSrvReqStr}"></div>-->
 <!--                    <div th:remove="tag" th:utext="${HTML_nOfUserStr}"></div>-->
 <!--                    <div th:remove="tag" th:utext="${HTML_onTechUserStr}"></div>-->
