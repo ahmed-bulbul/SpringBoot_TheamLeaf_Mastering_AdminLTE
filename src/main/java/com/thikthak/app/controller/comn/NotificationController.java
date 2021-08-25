@@ -66,6 +66,7 @@ public class NotificationController {
         return "view/comn/notification/show";
     }
 
+    @Secured({"ROLE_EDITOR", "ROLE_ADMIN"})
     @RequestMapping(path = "/create")
     public String create(Model model)
     {
